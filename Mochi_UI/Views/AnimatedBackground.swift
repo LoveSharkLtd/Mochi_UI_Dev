@@ -9,47 +9,6 @@
 import Foundation
 import UIKit
 
-/* Device Vars */
-var sH : CGFloat = 0.0 // screen height
-var sW : CGFloat = 0.0 // screen width
-var sHR : CGFloat = 0.0 // corrected screen height, mainly for iPhone X dimensions
-var sHP : CGFloat = 0.0 // height for presentViewController : normal devices = sH : tall devices = sH * 758 / 812 : iPads = 1006 x 712
-var sWP : CGFloat = 0.0 // only really different for ipads
-
-var _deviceType : deviceType = .normal // what device is being used - for adding padding to top and bottom as and when needed - also to set maximum widths for ipads.
-
-enum deviceType {
-    case normal // any non iPad / non iPhone X type device
-    case tall // any iPhone X type device
-    case iPad // any iPad type device
-}
-
-func updateScreenScales() {
-    sW = UIScreen.main.bounds.size.width
-    sH = UIScreen.main.bounds.size.height
-    sHR = sH * (1920.0 / 1080.0) / (sH / sW)
-    if (sHR / sH > 1.1) { sHR = sH * (4 / 3) / (sH / sW) }
-    sWP = sW
-    sHP = sH
-    
-    let _sHR = (1920 / 1080) / (sH / sW)
-    
-    if _sHR < 0.9 {
-        _deviceType = .tall
-        if #available(iOS 13.0, *) {
-            sHP = sH * 758.0 / 812.0
-        }
-    } else if _sHR > 1.1 {
-        _deviceType = .iPad
-        sHR = sH
-        if #available(iOS 13.0, *) {
-            // until apple sorts it's crap out we can't use !fullscreen modals for the modal VCs
-//                sHP = sH * 1006 / 1194
-//                sWP = sW * 712 / 834
-        }
-    }
-    
-}
 class AnimatedBackground: UIView {
     override init(frame: CGRect) { super.init(frame: frame)}
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
