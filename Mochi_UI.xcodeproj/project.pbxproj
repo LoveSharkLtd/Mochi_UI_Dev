@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE6AAAFB2473D87600859203 /* Grimes_v3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EE6AAAFA2473D87600859203 /* Grimes_v3.mp4 */; };
+		EE6AAAFD2473D88D00859203 /* videoPlayerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6AAAFC2473D88D00859203 /* videoPlayerLayer.swift */; };
 		EEA6BB9124714B9700FE5C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6BB9024714B9700FE5C17 /* AppDelegate.swift */; };
 		EEA6BB9524714B9700FE5C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6BB9424714B9700FE5C17 /* ViewController.swift */; };
 		EEA6BB9824714B9700FE5C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA6BB9624714B9700FE5C17 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE6AAAFA2473D87600859203 /* Grimes_v3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Grimes_v3.mp4; sourceTree = "<group>"; };
+		EE6AAAFC2473D88D00859203 /* videoPlayerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoPlayerLayer.swift; sourceTree = "<group>"; };
 		EEA6BB8D24714B9700FE5C17 /* Mochi_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mochi_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA6BB9024714B9700FE5C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEA6BB9424714B9700FE5C17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			children = (
 				EEA6BB9024714B9700FE5C17 /* AppDelegate.swift */,
 				EEA6BB9424714B9700FE5C17 /* ViewController.swift */,
+				EE6AAAFA2473D87600859203 /* Grimes_v3.mp4 */,
 				EEA6BBAC247178C000FE5C17 /* Views */,
 				EEA6BB9624714B9700FE5C17 /* Main.storyboard */,
 				EEA6BB9924714B9A00FE5C17 /* Assets.xcassets */,
@@ -80,6 +85,7 @@
 				EEA6BBA6247154B700FE5C17 /* likeButton.swift */,
 				EEA6BBA424714E9100FE5C17 /* AnimatedBackground.swift */,
 				EEA6BBAA24716B0C00FE5C17 /* ProgressBar.swift */,
+				EE6AAAFC2473D88D00859203 /* videoPlayerLayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 				EEA6BB9D24714B9A00FE5C17 /* LaunchScreen.storyboard in Resources */,
 				EEA6BB9A24714B9A00FE5C17 /* Assets.xcassets in Resources */,
 				EEA6BB9824714B9700FE5C17 /* Main.storyboard in Resources */,
+				EE6AAAFB2473D87600859203 /* Grimes_v3.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +167,7 @@
 				EEA6BBA524714E9100FE5C17 /* AnimatedBackground.swift in Sources */,
 				EEA6BBA9247159F800FE5C17 /* Utilities.swift in Sources */,
 				EEA6BBAB24716B0C00FE5C17 /* ProgressBar.swift in Sources */,
+				EE6AAAFD2473D88D00859203 /* videoPlayerLayer.swift in Sources */,
 				EEA6BB9124714B9700FE5C17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

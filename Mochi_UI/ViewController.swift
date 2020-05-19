@@ -54,7 +54,19 @@ class ViewController: UIViewController, likeButtonDelegate {
         progressBar = ProgressBar(width : sW * 0.8, segments: 4, color : turquoise)
         progressBar?.center = CGPoint(x : tempBG.frame.size.width * 0.5, y : tempBG.frame.size.height * 0.5)
         tempBG.addSubview(progressBar!)
+        
+        let h = sHR * 250 / 667
+        let videoPreview = UIButton(type: .custom)
+        videoPreview.frame = CGRect(x: 0.0, y: 0.0, width: h * 1080.0 / 1920.0, height: h)
+        videoPreview.layer.addSublayer(VideoPlayerLayer(videoURL: Bundle.main.url(forResource: "Grimes_v3", withExtension: "mp4")!, size: videoPreview.frame.size))
+        videoPreview.center = CGPoint(x: sW * 0.5, y: sH * 0.75)
+        videoPreview.addTarget(self, action: #selector(videoBtnFtn(_:)), for: .touchUpInside)
+        self.view.addSubview(videoPreview)
     }
-
-
+    
+    @objc func videoBtnFtn(_ sender : UIButton) {
+        let layer = sender.layer.sublayers?.first as! VideoPlayerLayer
+        layer.togglePlay()
+    }
+    
 }
